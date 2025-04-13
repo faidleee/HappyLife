@@ -6,6 +6,8 @@
 		<Nullable>enable</Nullable>
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- 游戏路径 -->
+    <TaiwuPath>D:\SteamLibrary\steamapps\common\The Scroll Of Taiwu</TaiwuPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -18,30 +20,28 @@
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\0Harmony.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="GameData">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\Backend\GameData.dll</HintPath>
+      <HintPath>$(TaiwuPath)\Backend\GameData.dll</HintPath>
     </Reference>
     <Reference Include="Redzen">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\Backend\Redzen.dll</HintPath>
+      <HintPath>$(TaiwuPath)\Backend\Redzen.dll</HintPath>
     </Reference>
     <Reference Include="TaiwuModdingLib">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\TaiwuModdingLib.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\TaiwuModdingLib.dll</HintPath>
     </Reference>
     <Reference Include="Taiwu_EventPackage_CharacterInteraction_Interact">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\Event\EventLib\Taiwu_EventPackage_CharacterInteraction_Interact.dll</HintPath>
+      <HintPath>$(TaiwuPath)\Event\EventLib\Taiwu_EventPackage_CharacterInteraction_Interact.dll</HintPath>
     </Reference>
     <Reference Include="Taiwu_EventPackage_CharacterInteraction_Main">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\Event\EventLib\Taiwu_EventPackage_CharacterInteraction_Main.dll</HintPath>
+      <HintPath>$(TaiwuPath)\Event\EventLib\Taiwu_EventPackage_CharacterInteraction_Main.dll</HintPath>
     </Reference>
     <Reference Include="Taiwu_EventPackage_CharacterInteraction_Relate">
-      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\The Scroll Of Taiwu\Event\EventLib\Taiwu_EventPackage_CharacterInteraction_Relate.dll</HintPath>
+      <HintPath>$(TaiwuPath)\Event\EventLib\Taiwu_EventPackage_CharacterInteraction_Relate.dll</HintPath>
     </Reference>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetPath) &quot;D:\Program Files (x86)\Steam\steamapps\workshop\content\838350\2871634952\Plugins\HappyLife.dll&quot;&#xD;&#xA;copy $(TargetPath) &quot;G:\Development\Git\HappyLife\HappyLife\Export\HappyLife\Plugins\HappyLife.dll&quot;&#xD;&#xA;copy $(ProjectDir)\Config.lua &quot;D:\Program Files (x86)\Steam\steamapps\workshop\content\838350\2871634952\Config.lua&quot;&#xD;&#xA;copy $(ProjectDir)\Config.lua &quot;G:\Development\Git\HappyLife\HappyLife\Export\HappyLife\Config.lua&quot;&#xD;&#xA; " />
-  </Target>
+
 
 </Project>

@@ -33,30 +33,34 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <!-- 游戏路径 -->
+    <TaiwuPath>D:\SteamLibrary\steamapps\common\The Scroll Of Taiwu</TaiwuPath>
+  </PropertyGroup>
+
+
   <ItemGroup>
     <Compile Include="HappyLifeFrontend.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>N:\Games\SteamLibrary\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\0Harmony.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>N:\Games\SteamLibrary\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="TaiwuModdingLib">
-      <HintPath>N:\Games\SteamLibrary\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\TaiwuModdingLib.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\TaiwuModdingLib.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>N:\Games\SteamLibrary\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>N:\Games\SteamLibrary\steamapps\common\The Scroll Of Taiwu\The Scroll of Taiwu_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(TaiwuPath)\The Scroll of Taiwu_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) "N:\Games\SteamLibrary\steamapps\workshop\content\838350\2871634952\Plugins\HappyLife.Frontend.dll"
-copy $(TargetPath) G:\Development\Git\HappyLife\HappyLife\Export\HappyLife\Plugins\$(TargetFileName)</PostBuildEvent>
-  </PropertyGroup>
 </Project>
